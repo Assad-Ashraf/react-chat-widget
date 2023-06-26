@@ -20,7 +20,7 @@ function App() {
         handleToggle={(toggleStatus: any) => {
           if (toggleStatus) {
             window.parent.postMessage("true", "*");
-          } else localStorage.setItem("false", "false");
+          } else localStorage.setItem("false", "*");
         }}
       />
     </div>
