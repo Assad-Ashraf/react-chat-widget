@@ -19,8 +19,8 @@ function App() {
         onClick={() => console.log(isWidgetOpened)}
         handleToggle={(toggleStatus: any) => {
           if (toggleStatus) {
-            localStorage.setItem("openState", "true");
-          } else localStorage.setItem("openState", "false");
+            window.parent.postMessage("true", "*");
+          } else localStorage.setItem("false", "false");
         }}
       />
     </div>
