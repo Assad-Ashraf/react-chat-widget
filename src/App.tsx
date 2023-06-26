@@ -1,8 +1,10 @@
-import { Widget } from "react-chat-widget";
+import { Widget, isWidgetOpened } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
 
 import "./App.css";
+
+//This is the image component, copy it to your project
 
 function App() {
   const handleNewUserMessage = (newMessage: any) => {
@@ -12,7 +14,15 @@ function App() {
 
   return (
     <div className="App">
-      <Widget handleNewUserMessage={handleNewUserMessage} />
+      <Widget
+        handleNewUserMessage={handleNewUserMessage}
+        onClick={() => console.log(isWidgetOpened)}
+        handleToggle={(toggleStatus: any) => {
+          if (toggleStatus) {
+            localStorage.setItem("openState", "true");
+          } else localStorage.setItem("openState", "false");
+        }}
+      />
     </div>
   );
 }
