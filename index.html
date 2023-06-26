@@ -8,6 +8,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // window.addEventListener("message", function (event) {
+      //   console.log("Message received from the child: " + event.data); // Message received from child
+      // });
+
+      window.parent.postMessage("Hello", "world");
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
