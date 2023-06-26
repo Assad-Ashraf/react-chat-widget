@@ -20,7 +20,7 @@ function App() {
         handleToggle={(toggleStatus: any) => {
           if (toggleStatus) {
             window.parent.postMessage("true", "*");
-          } else window.parent.postMessage("true", "*");
+          } else window.parent.postMessage("false", "*");
         }}
       />
     </div>
