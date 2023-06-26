@@ -2,6 +2,8 @@ import { Widget } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
 
+import "./App.css";
+
 function App() {
   const handleNewUserMessage = (newMessage: any) => {
     console.log(`New message incoming! ${newMessage}`);
