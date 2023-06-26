@@ -1,7 +1,9 @@
 body {
   overflow: hidden !important;
+  min-height: auto !important;
 }
 
 .rcw-widget-container {
   margin: 12px !important;
+  position: initial;
 }
